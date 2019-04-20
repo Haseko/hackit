@@ -5,7 +5,7 @@ routes = [
   },
   {
     path: '/about/',
-    componentUrl: './pages/about.html',
+    url: './pages/about.html',
   },
   {
     path: '/catalog/',
@@ -22,6 +22,18 @@ routes = [
   {
     path: '/category-page/',
     componentUrl: './pages/category-page.html',
+  },
+  {
+    path: '/addresses/',
+    componentUrl: './pages/addresses.html',
+  },
+  {
+    path: '/all-categories/',
+    componentUrl: './pages/all-categories.html/'
+  },
+  {
+    path: '/all-categories/category-page',
+    componentUrl: './pages/category-page.html'
   },
 
   // Page Loaders & Router

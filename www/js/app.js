@@ -30,6 +30,18 @@ var app  = new Framework7({
           title: 'Apple iPhone X',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
         },
+        {          id: '4',
+          title: 'Apple iPhone X',
+          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
+        },
+        {          id: '5',
+          title: 'Apple iPhone X',
+          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
+        },
+        {          id: '6',
+          title: 'Apple iPhone X',
+          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
+        },
       ]
     };
   },
@@ -51,15 +63,16 @@ var homeView = app.views.create('#view-home', {
     pageInit: function(){
 
       $$('#mainPage .category-list').html('');
-
+      i = 0;
       app.data.products.forEach(function(v, i){
-
-        $$('#mainPage .category-list').append(
-          '<a class="col-50 bg-color-red margin-bottom" href="/category-page/" style="display: block">'+
-          '<h2 class="text-align-center">' + v.title +'</h2></a>'
-        );
-
+        if(i < 4){
+          $$('#mainPage .category-list').append(
+            '<a class="col-50 bg-color-red margin-bottom" href="/category-page/" style="display: block">'+
+            '<h2 class="text-align-center">' + v.title +'</h2></a>'
+          );
+        }
       });
+
 
     }
 
@@ -84,3 +97,4 @@ $$('#my-login-screen .login-button').on('click', function () {
   // Alert username and password
   app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
+

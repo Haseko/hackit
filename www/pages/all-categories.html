@@ -1,0 +1,33 @@
+<template>
+  <div class="page" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link" onclick="app.views.main.router.navigate('/')">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title"></div>
+      </div>
+    </div>
+    <div class="page-content" id="categories">
+      <div class="col row category-col padding-top">
+        {{#each products}}
+          <a class="col-50 bg-color-red margin-bottom" href="category-page/" style="display: block">
+          <h2 class="text-align-center">{{title}}</h2></a>
+        {{/each}}
+
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    data: function () {
+      return {
+        products: app.data.products,
+      };
+    }
+  };
+</script>
