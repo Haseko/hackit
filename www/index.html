@@ -80,14 +80,14 @@
             <i class="icon f7-icons ios-only">settings</i>
             <i class="icon f7-icons ios-only icon-ios-fill">settings_fill</i>
             <i class="icon material-icons md-only">settings</i>
-            <span class="tabbar-label">Settings</span>
+            <span class="tabbar-label">Профиль</span>
           </a>
         </div>
-      </div>
+      </div>  
       <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
       <div id="view-home" class="view view-main tab tab-active">
         <!-- Page, data-name contains page name which can be used in page callbacks -->
-        <div class="page" data-name="home">
+        <div class="page" id="mainPage" data-name="home">
           <!-- Top Navbar -->
           <div class="navbar">
             <div class="navbar-inner">
@@ -109,65 +109,82 @@
 
           <!-- Scrollable page content-->
           <div class="page-content">
-            <div class="block block-strong">
-              <p>This is an example of tabs-layout application. The main point of such tabbed layout is that each tab contains independent view with its own routing and navigation.</p>
-              <p>Each tab/view may have different layout, different navbar type (dynamic, fixed or static) or without navbar like this tab.</p>
-            </div>
-
-            <div class="block-title">Navigation</div>
-            <div class="list">
-              <ul>
-                <li>
-                  <a href="/about/" class="item-content item-link">
-                    <div class="item-inner">
-                      <div class="item-title">About</div>
-                    </div>
+            <div class="col">
+              <h1 class="margin-left">
+                Food of the Day!
+              </h1>
+              <div class="card card-expandable no-margin-top" style="height: 150px">
+              <div class="card-content">
+                <div class="bg-color-red" style="height: 150px">
+                  <div class="card-header text-color-white display-block">
+                      Пловыч XDDD
+                    <br>
+                    <small style="opacity: 0.7">ЫЫЫЫЫ</small>
+                  </div>
+                  <a href="#" class="link card-close card-opened-fade-in color-white" style="position: absolute; right: 15px; top: 15px">
+                    <i class="icon f7-icons">close_round_fill</i>
                   </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="block-title">Modals</div>
-            <div class="block block-strong">
-              <div class="row">
-                <div class="col-50">
-                  <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Popup</a>
                 </div>
-                <div class="col-50">
-                  <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Login Screen</a>
+                <div class="card-content-padding">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  ...
                 </div>
               </div>
-            </div>
-
-            <div class="block-title">Panels</div>
-            <div class="block block-strong">
-              <div class="row">
-                <div class="col-50">
-                  <a href="#" class="button button-raised button-fill panel-open" data-panel="left">Left Panel</a>
-                </div>
-                <div class="col-50">
-                  <a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a>
-                </div>
               </div>
             </div>
+              
+              <div class="col-100 padding-left padding-right category-col" style="margin-top: 50px">
+                <div class="no-margin-bottom row">
+                  <div class="col-75">
+                    <h1 class="no-margin-top">Categories</h1>
+                  </div>
+                  <div class="col-25">
+                    <button class="col button" style="margin-top: 4px">
+                      More+
+                    </button>
+                  </div>
+                </div>
+                
+                <div class="row category-list">
+                  <a class="col-50 bg-color-red margin-bottom" href="/category-page/" style="display: block">
+                    <h2 class="text-align-center">
+                      Breakfast
+                    </h2>
+                  </a>
+                  <a class="col-50 bg-color-red margin-bottom" href="/category-page/" style="display: block">
+                    <h2 class="text-align-center">
+                      Breakfast
+                    </h2>
+                  </a>
+                  <a class="col-50 bg-color-red margin-bottom" href="/category-page/" style="display: block">
+                    <h2 class="text-align-center">
+                      Breakfast
+                    </h2>
+                  </a>
+                  <a class="col-50 bg-color-red margin-bottom" href="/category-page/" style="display: block">
+                    <h2 class="text-align-center">
+                      Breakfast
+                    </h2>
+                  </a>
+                </div>
+              </div>
 
-            <div class="block-title searchbar-hide-on-search">Page Loaders & Router</div>
-            <div class="list links-list searchbar-hide-on-search">
-              <ul>
-                <li>
-                  <a href="/page-loader-template7/vladimir/123/about-me/1/?start=0&end=30#top">Template7 Page</a>
-                </li>
-                <li>
-                  <a href="/page-loader-component/vladimir/123/about-me/1/?start=0&end=30#top">Component Page</a>
-                </li>
-                <li>
-                  <a href="/load-something-that-doesnt-exist/">Default Route (404)</a>
-                </li>
-                <li>
-                  <a href="/request-and-load/user/123456/">Request Data & Load</a>
-                </li>
-              </ul>
-            </div>
+
+
+
+
+
+
+
+
+
+
+
           </div>
         </div>
       </div>

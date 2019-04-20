@@ -46,7 +46,25 @@ var app  = new Framework7({
 
 // Init/Create views
 var homeView = app.views.create('#view-home', {
-  url: '/'
+  url: '/',
+  on: {
+
+    pageInit: function(){
+
+      $$('#mainPage .category-list').html('');
+
+      app.data.products.forEach(function(v, i){
+
+        $$('#mainPage .category-list').append(
+          '<a class="col-50 bg-color-red margin-bottom" href="/category-page/" style="display: block">'+
+          '<h2 class="text-align-center">' + v.title +'</h2></a>'
+        );
+
+      });
+
+    }
+
+  }
 });
 var catalogView = app.views.create('#view-catalog', {
   url: '/catalog/'
