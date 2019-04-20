@@ -115,32 +115,31 @@ var app  = new Framework7({
       products: [
         {
           id: '1',
-          title: 'Apple iPhone 8',
+          title: 'Burgers',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi tempora similique reiciendis, error nesciunt vero, blanditiis pariatur dolor, minima sed sapiente rerum, dolorem corrupti hic modi praesentium unde saepe perspiciatis.',
           category: 'meat'
         },
         {
           id: '2',
-          title: 'Apple iPhone 8 Plus',
+          title: 'Potato with cheese',
           description: 'Velit odit autem modi saepe ratione totam minus, aperiam, labore quia provident temporibus quasi est ut aliquid blanditiis beatae suscipit odio vel! Nostrum porro sunt sint eveniet maiores, dolorem itaque!',
           category: 'veg'
         },
         { id: '3',
-          title: 'Apple iPhone X',
+          title: 'Lasagna',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.',
           category: 'soup'
         },
-        { id: '4',
-          title: 'Apple iPhone X',
-          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.',
-          category: 'burger'
-        },
-        { id: '5',
-          title: 'Apple iPhone X',
+        {          id: '4',
+          title: 'Taco',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
         },
-        { id: '6',
-          title: 'Apple iPhone X',
+        {          id: '5',
+          title: 'Nachos',
+          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
+        },
+        {          id: '6',
+          title: 'Taquitos',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
         },
       ]
@@ -168,8 +167,8 @@ var homeView = app.views.create('#view-home', {
       app.data.products.forEach(function(v, i){
         if(i < 4){
           $$('#mainPage .category-list').append(
-            '<a class="col-50 bg-color-red margin-bottom" href="/category-page/'+v.category+'" style="display: block">'+
-            '<h2 class="text-align-center">' + v.title +'</h2></a>'
+            '<a class="col-50 bg-color-blue margin-bottom" href="/category-page/'+v.category+'" style="display: block">'+
+            '<h2 class="text-align-center" style="color: white">' + v.title +'</h2></a>'
           );
         }
       });
