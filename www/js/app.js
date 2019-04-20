@@ -16,19 +16,19 @@ var app  = new Framework7({
       },
       // Demo products for Catalog section
       category: {
-        meat:[
+        Burgers:[
           1, 2
         ],
 
-        veg:[
+        Potato:[
           3
         ],
 
-        soup:[
+        Lasagna:[
           1, 2, 3
         ],
 
-        burger:[
+        Taco:[
           1
         ]
       },
@@ -117,22 +117,23 @@ var app  = new Framework7({
           id: '1',
           title: 'Burgers',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi tempora similique reiciendis, error nesciunt vero, blanditiis pariatur dolor, minima sed sapiente rerum, dolorem corrupti hic modi praesentium unde saepe perspiciatis.',
-          category: 'meat'
+          category: 'Burgers'
         },
         {
           id: '2',
           title: 'Potato with cheese',
           description: 'Velit odit autem modi saepe ratione totam minus, aperiam, labore quia provident temporibus quasi est ut aliquid blanditiis beatae suscipit odio vel! Nostrum porro sunt sint eveniet maiores, dolorem itaque!',
-          category: 'veg'
+          category: 'Potato'
         },
         { id: '3',
           title: 'Lasagna',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.',
-          category: 'soup'
+          category: 'Lasagna'
         },
         {          id: '4',
           title: 'Taco',
-          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
+          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.',
+          category: 'Taco'
         },
         {          id: '5',
           title: 'Nachos',
