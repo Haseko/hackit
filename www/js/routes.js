@@ -35,7 +35,6 @@ routes = [
     path: '/all-categories/category-page',
     componentUrl: './pages/category-page.html'
   },
-
   // Page Loaders & Router
   {
     path: '/page-loader-template7/:user/:userId/:posts/:postId/',
