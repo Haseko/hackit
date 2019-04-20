@@ -14,11 +14,14 @@
     <div class="page-content">
       <div class="list links-list">
         <ul>
-          {{#each products}}
-            <li><a href="/product/{{id}}/">{{title}}</a></li>
+          {{#each category}}
+            <il>
+              <a class="col-50 bg-color-red margin-bottom" href="/product/"></a>
+            </il>
           {{/each}}
         </ul>
       </div>
+      
     </div>
   </div>
 </template>
@@ -26,7 +29,9 @@
   return {
     data: function () {
       return {
-        products: this.$root.products,
+        category: app.data.category[this.$route.params.id],
+        id: this.$route.params.id
+
       };
     }
   };

@@ -20,7 +20,7 @@ routes = [
     url: './pages/settings.html',
   },
   {
-    path: '/category-page/',
+    path: '/category-page/:id',
     componentUrl: './pages/category-page.html',
   },
 
@@ -63,7 +63,7 @@ routes = [
             {
               title: 'Framework7 Forum',
               url: 'http://forum.framework7.io',
-            },
+            }, 
           ]
         };
         // Hide Preloader
