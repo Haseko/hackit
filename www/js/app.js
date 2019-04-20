@@ -26,6 +26,10 @@ var app  = new Framework7({
 
         soup:[
           1, 2, 3
+        ],
+
+        burger:[
+          1
         ]
       },
 
@@ -39,7 +43,7 @@ var app  = new Framework7({
           id:'1'
         },
         2: {
-          name: 'a',
+          name: 'b',
           title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           products: [1, 2, 3],
           description: 'v',
@@ -48,7 +52,7 @@ var app  = new Framework7({
         },
 
         3: {
-          name: 'a',
+          name: 'c',
           title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           products: [1, 2, 3],
           description: 'v',
@@ -93,10 +97,10 @@ var app  = new Framework7({
         }],
         3: [{
   
-            name:'1',
-            img:'1',
-            description:'1',
-            markets:[1,2,3]
+          name:'1',
+          img:'1',
+          description:'1',
+          markets:[1,2,3]
   
           },
           {
@@ -126,15 +130,16 @@ var app  = new Framework7({
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.',
           category: 'soup'
         },
-        {          id: '4',
+        { id: '4',
+          title: 'Apple iPhone X',
+          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.',
+          category: 'burger'
+        },
+        { id: '5',
           title: 'Apple iPhone X',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
         },
-        {          id: '5',
-          title: 'Apple iPhone X',
-          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
-        },
-        {          id: '6',
+        { id: '6',
           title: 'Apple iPhone X',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
         },

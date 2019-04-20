@@ -32,7 +32,7 @@ routes = [
     componentUrl: './pages/all-categories.html/'
   },
   {
-    path: '/all-categories/category-page',
+    path: '/all-categories/category-page/:id',
     componentUrl: './pages/category-page.html'
   },
   // Page Loaders & Router
