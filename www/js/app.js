@@ -17,131 +17,125 @@ var app  = new Framework7({
       // Demo products for Catalog section
       category: {
         meat:[
-          {
-            name: 'a',
-            title: 'b',
-            products: [1, 2, 3],
-            description: 'v',
-            img: '1'
-          },
-          {
-            name: 'd',
-            title: 'c',
-            products: [1, 2, 3],
-            description: 's',
-            img: '2'
-          },
-          {
-            name: 'e',
-            title: 'f',
-            products: [1, 2, 3],
-            description: 'g',
-            img: '3'
-          }
+          1, 2
         ],
 
         veg:[
-          {
-            name: 'a',
-            title: 'b',
-            products: [1, 2, 3],
-            description: 'v',
-            img: '1'
-          },
-          {
-            name: 'd',
-            title: 'c',
-            products: [1, 2, 3],
-            description: 's',
-            img: '2'
-          },
-          {
-            name: 'e',
-            title: 'f',
-            products: [1, 2, 3],
-            description: 'g',
-            img: '3'
-          }
+          3
         ],
 
         soup:[
-          {
-            name: 'a',
-            title: 'b',
-            products: [1, 2, 3],
-            description: 'v',
-            img: '1'
-          },
-          {
-            name: 'd',
-            title: 'c',
-            products: [1, 2, 3],
-            description: 's',
-            img: '2'
-          },
-          {
-            name: 'e',
-            title: 'f',
-            products: [1, 2, 3],
-            description: 'g',
-            img: '3'
-          }
+          1, 2, 3
         ]
       },
-      productList: {
+
+      recipeList: {
         1: {
+          name: 'a',
+          title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          products: [1, 2, 3],
+          description: 'v',
+          img: '1',
+          id:'1'
+        },
+        2: {
+          name: 'a',
+          title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          products: [1, 2, 3],
+          description: 'v',
+          img: '1',
+          id:'1'
+        },
+
+        3: {
+          name: 'a',
+          title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          products: [1, 2, 3],
+          description: 'v',
+          img: '1',
+          id:'1' 
+        }
+
+      },
+
+      productList: {
+        1: [{
+  
+            name:'1',
+            img:'1',
+            description:'1',
+            markets:[1,2,3]
+  
+          },
+          {
 
           name:'1',
           img:'1',
           description:'1',
           markets:[1,2,3]
 
-        },
-        2: {
+        }],
+        2: [{
+  
+            name:'1',
+            img:'1',
+            description:'1',
+            markets:[1,2,3]
+  
+          },
+          {
 
-          name:'2',
-          img:'2',
-          description:'2',
+          name:'1',
+          img:'1',
+          description:'1',
           markets:[1,2,3]
 
-        },
-        3: {
+        }],
+        3: [{
+  
+            name:'1',
+            img:'1',
+            description:'1',
+            markets:[1,2,3]
+  
+          },
+          {
 
-          name:'3',
-          img:'3',
-          description:'3',
+          name:'1',
+          img:'1',
+          description:'1',
           markets:[1,2,3]
 
-        }
+        }]
       },
       products: [
         {
           id: '1',
-          title: 'Apple iPhone 8',
+          title: 'Burgers',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi tempora similique reiciendis, error nesciunt vero, blanditiis pariatur dolor, minima sed sapiente rerum, dolorem corrupti hic modi praesentium unde saepe perspiciatis.',
           category: 'meat'
         },
         {
           id: '2',
-          title: 'Apple iPhone 8 Plus',
+          title: 'Potato with cheese',
           description: 'Velit odit autem modi saepe ratione totam minus, aperiam, labore quia provident temporibus quasi est ut aliquid blanditiis beatae suscipit odio vel! Nostrum porro sunt sint eveniet maiores, dolorem itaque!',
           category: 'veg'
         },
         { id: '3',
-          title: 'Apple iPhone X',
+          title: 'Lasagna',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.',
           category: 'soup'
         },
         {          id: '4',
-          title: 'Apple iPhone X',
+          title: 'Taco',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
         },
         {          id: '5',
-          title: 'Apple iPhone X',
+          title: 'Nachos',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
         },
         {          id: '6',
-          title: 'Apple iPhone X',
+          title: 'Taquitos',
           description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
         },
       ]
@@ -169,8 +163,8 @@ var homeView = app.views.create('#view-home', {
       app.data.products.forEach(function(v, i){
         if(i < 4){
           $$('#mainPage .category-list').append(
-            '<a class="col-50 bg-color-red margin-bottom" href="/category-page/'+v.category+'" style="display: block">'+
-            '<h2 class="text-align-center">' + v.title +'</h2></a>'
+            '<a class="col-50 bg-color-blue margin-bottom" href="/category-page/'+v.category+'" style="display: block">'+
+            '<h2 class="text-align-center" style="color: white">' + v.title +'</h2></a>'
           );
         }
       });

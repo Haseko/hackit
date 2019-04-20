@@ -12,24 +12,35 @@
       </div>
     </div>
     <div class="page-content">
-      <div class="list links-list">
-        <ul>
-          {{#each category}}
-            <il>
-              <a class="col-50 bg-color-red margin-bottom" href="/product/"></a>
-            </il>
-          {{/each}}
-        </ul>
-      </div>
-      
+      {{#each category}}
+      <a href="/product/">
+        <div class="card">
+          <div class="card-header">{{name}}</div>
+          <div class="card-content">
+            <img src="#">
+            <p>{{title}}</p>
+          </div>
+          <div class="card-footer">Ingridients:{{products}}</div>
+        </div>
+      </a>
+      {{/each}}
     </div>
   </div>
 </template>
 <script>
   return {
     data: function () {
+
+      let pr = [];
+
+      app.data.category[this.$route.params.id].forEach(function(v, i){
+
+        pr.push(app.data.recipeList[v])
+
+      })
+
       return {
-        category: app.data.category[this.$route.params.id],
+        category: pr,
         id: this.$route.params.id
 
       };
