@@ -32,8 +32,8 @@
                 {{#each products}}
                         <li class="item-content col-100 padding-left padding-right">
 
-                                <a class="col-100 margin-bottom" href="category-page/{{category}}" style="display: block;height:200px; padding:0; width:100%;margin:0; display: block; border-radius: 10px; background-image:url(images/{{title}}.jpg); -webkit-background-size: cover">
-                                    <h2 class="text-align-center item-titleee" style="color: white; background: rgba(255,59,48,0.8); padding-top: 10px; padding-bottom: 10px">{{title}}
+                                <a class="col-100 margin-bottom elevation-16" href="#" style="display: block;height:200px; padding:0; width:100%;margin:0; display: block; border-radius: 10px; background-image:url(http://9142767578.myjino.ru{{img}}); -webkit-background-size: cover; position:relative;">
+                                    <h2 class="text-align-center item-titleee" style="color: white; background: rgba(0,0,0,0.7); padding-top: 10px; padding-bottom: 10px; position: absolute; bottom: 0px; width: 100%">{{name}}
                                     </h2>
                                 </a>
 
@@ -51,7 +51,7 @@
     return {
         data: function() {
             return {
-                products: app.data.products,
+                products: app.data.productList,
             };
         }
     };
