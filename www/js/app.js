@@ -6,7 +6,7 @@ var app  = new Framework7({
   root: '#app', // App root element
   id: 'io.framework7.testapp', // App bundle ID
   name: 'Framework7', // App name
-  theme: 'auto', // Automatic theme detection
+  theme: 'ios', // Automatic theme detection
   // App root data
   data: function () {
     return {
@@ -178,7 +178,7 @@ var homeView = app.views.create('#view-home', {
       app.data.products.forEach(function(v, i){
         if(i < 4){
           $$('#mainPage .category-list').append(
-            '<a class="col-50 bg-color-blue margin-bottom" href="/category-page/'+v.category+'" style="display: block">'+
+            '<a class="col-50 margin-bottom" href="/category-page/'+v.category+'" style="display: block; background-image: url(images/'+v.category+'.jpg); -webkit-background-size: cover;">'+
             '<h2 class="text-align-center" style="color: white">' + v.title +'</h2></a>'
           );
         }
