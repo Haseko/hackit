@@ -1,33 +1,34 @@
 <template>
-  <div class="page" data-name="catalog">
-    <div class="navbar">
-      <div class="navbar-inner sliding">
-        <div class="left">
-          <a href="#" class="link back" onclick="app.views.main.router.navigate('/')">
-            <i class="icon icon-back"></i>
-            <span class="ios-only">Back</span>
-          </a>
+    <div class="page" data-name="catalog">
+        <div class="navbar">
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a href="#" class="link back" onclick="app.views.main.router.navigate('/')">
+                        <i class="icon icon-back"></i>
+                        <span class="ios-only">Back</span>
+                    </a>
+                </div>
+                <div class="title"></div>
+            </div>
         </div>
-        <div class="title"></div>
-      </div>
-    </div>
-    <div class="page-content" id="categories">
-      <div class="col-100 row category-col padding-top padding-left padding-right">
-        {{#each products}}
-          <a class="col-50 bg-color-red margin-bottom" href="category-page/{{category}}" style="display: block">
-          <h2 class="text-align-center" style="color: white">{{title}}</h2></a>
-        {{/each}}
+        <div class="page-content" id="categories">
+            <div class="col-100 row category-col padding-top padding-left padding-right">
+                {{#each products}}
+                    <a class="col-50 bg-color-red margin-bottom" href="category-page/{{category}}" style="display: block">
+                        <h2 class="text-align-center" style="color: white">{{title}}</h2>
+                    </a>
+                {{/each}}
 
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </template>
 <script>
-  return {
-    data: function () {
-      return {
-        products: app.data.products,
-      };
-    }
-  };
+    return {
+        data: function() {
+            return {
+                products: app.data.products,
+            };
+        }
+    };
 </script>
