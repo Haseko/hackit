@@ -168,7 +168,7 @@ var homeView = app.views.create('#view-home', {
       app.data.products.forEach(function(v, i){
         if(i < 4){
           $$('#mainPage .category-list').append(
-            '<a class="col-50 bg-color-blue margin-bottom" href="/category-page/'+v.category+'" style="display: block">'+
+            '<a class="col-50 margin-bottom" href="/category-page/'+v.category+'" style="display: block; background-image: url(images/'+v.category+'.jpg); -webkit-background-size: cover;">'+
             '<h2 class="text-align-center" style="color: white">' + v.title +'</h2></a>'
           );
         }
