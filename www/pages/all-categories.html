@@ -3,21 +3,44 @@
     <div class="navbar">
       <div class="navbar-inner sliding">
         <div class="left">
-          <a href="#" class="link" onclick="app.views.main.router.navigate('/')">
+          <a href="#" class="link back" onclick="app.views.main.router.navigate('/')">
             <i class="icon icon-back"></i>
             <span class="ios-only">Back</span>
           </a>
         </div>
         <div class="title"></div>
+        <div class="subnavbar">
+          <!-- Searchbar with auto init -->
+          <form class="searchbar" onclick="searchbar = app.searchbar.create({el: '.searchbar',searchContainer: '.list',searchIn: '.item-title',on: {search(sb, query, previousQuery) {console.log(query, previousQuery);}}});">
+            <div class="searchbar-inner">
+              <div class="searchbar-input-wrap">
+                <input type="search" placeholder="Search">
+                <i class="searchbar-icon"></i>
+                <span class="input-clear-button"></span>
+              </div>
+              <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <div class="page-content" id="categories">
-      <div class="col row category-col padding-top">
-        {{#each products}}
-          <a class="col-50 bg-color-red margin-bottom" href="category-page/{{category}}" style="display: block">
-          <h2 class="text-align-center" style="color: white">{{title}}</h2></a>
-        {{/each}}
-
+      <div class="searchbar-backdrop"></div>
+      <div class="col row category-col padding-top list searchbar-found">
+      {{#each products}}
+        <ul class="col-100">
+          <li class="item-content col-100">
+            <div class="item-inner col-100" style="margin:0">
+              <a class="col-100 bg-color-red margin-bottom" href="category-page/{{category}}" style="display: block;height:100%; padding:0; width:100%">
+                <h2 class="text-align-center" style="color: white"><div class="item-title">{{title}}</div></h2>
+              </a>
+            </div>
+          </li>
+        </ul>
+      {{/each}}
+      </div>
+      <div class="block searchbar-not-found">
+        <div class="block-inner">Nothing found</div>
       </div>
     </div>
   </div>
