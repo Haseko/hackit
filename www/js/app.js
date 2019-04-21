@@ -212,7 +212,7 @@ var app = new Framework7({
             app.data.cart.forEach(function(v, i) {
 
                 $$('#view-catalog .cartOutList').append('<li class="swipeout"><div class="item-content swipeout-content"><div class="item-inner"><div class="item-title">'
-                  + app.data.productList[v][0].name+
+                  + app.data.productList[v].name+
                   '</div></div></div>'+
                   '<div class="swipeout-actions-right">'+
                   '<a href="#" class="swipeout-delete">Delete</a>'+
@@ -233,7 +233,7 @@ var homeView = app.views.create('#view-home', {
 
         pageInit: function() {
 
-            var categ = Framework7.request.get('http://9142767578.myjino.ru/backend/getters/categorys.php', function(data){
+            Framework7.request.get('http://9142767578.myjino.ru/backend/getters/categorys.php', function(data){
 
                 app.data.category = JSON.parse(data);
 
@@ -241,9 +241,10 @@ var homeView = app.views.create('#view-home', {
                 i = 0;
                 for (var v in app.data.category) {
                     if (i < 4) {
+
                         $$('#mainPage .category-list').append(
-                            '<a class="col-50 margin-bottom" href="/category-page/' + app.data.category[v].category + '" style="display: block; background-image: url(' + app.data.url + app.data.category[v].img + '); -webkit-background-size: cover;">' +
-                            '<h2 class="text-align-center" style="color: white">' + app.data.category[v].title + '</h2></a>'
+                            '<a class="col-50 margin-bottom padding-top elevation-6" href="/category-page/' + app.data.category[v].name + '/" style="display: block; border-radius: 15px;background-image: url(' + app.data.url + app.data.category[v].img + '); -webkit-background-size: cover;">' +
+                            '<h4 class="text-align-center" style="color: white; background: rgba(255,59,48,0.8);padding-top: 7px; padding-bottom: 7px">' + app.data.category[v].title + '</h4></a>'
                         );
                     }
                     i++;
@@ -251,7 +252,17 @@ var homeView = app.views.create('#view-home', {
 
             });
 
+            Framework7.request.get('http://9142767578.myjino.ru/backend/getters/recipes.php', function(data){
 
+                app.data.recipeList = JSON.parse(data);
+
+            });
+
+            Framework7.request.get('http://9142767578.myjino.ru/backend/getters/products.php', function(data){
+
+                app.data.productList = JSON.parse(data);
+
+            });
 
 
         }
