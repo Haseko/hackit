@@ -205,7 +205,12 @@ var app = new Framework7({
 
             app.data.cart.forEach(function(v, i) {
 
-                $$('#view-catalog .cartOutList').append('<li><a href="/product/' + v + '/">' + app.data.productList[v][0].name + '</a></li>');
+                $$('#view-catalog .cartOutList').append('<li class="swipeout"><div class="item-content swipeout-content"><div class="item-inner"><div class="item-title">'
+                  + app.data.productList[v][0].name+
+                  '</div></div></div>'+
+                  '<div class="swipeout-actions-right">'+
+                  '<a href="#" class="swipeout-delete">Delete</a>'+
+                  '</div></li>');
 
             });
 
@@ -227,8 +232,8 @@ var homeView = app.views.create('#view-home', {
             for (var v in app.data.category) {
                 if (i < 4) {
                     $$('#mainPage .category-list').append(
-                        '<a class="col-50 margin-bottom" href="/category-page/' + app.data.category[v].category + '" style="display: block; background-image: url(images/' + app.data.category[v].category + '.jpg); -webkit-background-size: cover;">' +
-                        '<h2 class="text-align-center" style="color: white">' + app.data.category[v].title + '</h2></a>'
+                        '<a class="col-50 margin-bottom padding-top" href="/category-page/' + app.data.category[v].category + '" style="display: block; border-radius: 15px;background-image: url(images/' + app.data.category[v].category + '.jpg); -webkit-background-size: cover;">' +
+                        '<h4 class="text-align-center" style="color: white; background: rgba(255,59,48,0.8);padding-top: 7px; padding-bottom: 7px">' + app.data.category[v].title + '</h4></a>'
                     );
                 }
                 i++;
