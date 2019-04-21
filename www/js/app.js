@@ -9,7 +9,10 @@ var app = new Framework7({
     theme: 'ios', // Automatic theme detection
     // App root data
     data: function() {
+
+
         return {
+            url: 'http://9142767578.myjino.ru',
             user: {
                 firstName: 'John',
                 lastName: 'Doe',
@@ -19,7 +22,10 @@ var app = new Framework7({
 
             ],
             // Demo products for Catalog section
-            category: {
+            category: {},
+
+
+                /*
                 Burgers: {
                     id: '1',
                     title: 'Burgers',
@@ -74,7 +80,7 @@ var app = new Framework7({
                         1, 2, 3
                     ]
                 },
-            },
+                */
 
             recipeList: {
                 1: {
@@ -222,17 +228,25 @@ var homeView = app.views.create('#view-home', {
 
         pageInit: function() {
 
-            $$('#mainPage .category-list').html('');
-            i = 0;
-            for (var v in app.data.category) {
-                if (i < 4) {
-                    $$('#mainPage .category-list').append(
-                        '<a class="col-50 margin-bottom" href="/category-page/' + app.data.category[v].category + '" style="display: block; background-image: url(images/' + app.data.category[v].category + '.jpg); -webkit-background-size: cover;">' +
-                        '<h2 class="text-align-center" style="color: white">' + app.data.category[v].title + '</h2></a>'
-                    );
-                }
-                i++;
-            };
+            var categ = Framework7.request.get('http://9142767578.myjino.ru/backend/getters/categorys.php', function(data){
+
+                app.data.category = JSON.parse(data);
+
+                $$('#mainPage .category-list').html('');
+                i = 0;
+                for (var v in app.data.category) {
+                    if (i < 4) {
+                        $$('#mainPage .category-list').append(
+                            '<a class="col-50 margin-bottom" href="/category-page/' + app.data.category[v].category + '" style="display: block; background-image: url(' + app.data.url + app.data.category[v].img + '); -webkit-background-size: cover;">' +
+                            '<h2 class="text-align-center" style="color: white">' + app.data.category[v].title + '</h2></a>'
+                        );
+                    }
+                    i++;
+                };
+
+            });
+
+
 
 
         }
