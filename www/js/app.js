@@ -205,9 +205,9 @@ var app = new Framework7({
 
             app.data.cart.forEach(function(v, i) {
 
-                $$('#view-catalog .cartOutList').append('<li class="swipeout"><div class="item-content swipeout-content"><div class="item-inner"><div class="item-title">'
+                $$('#view-catalog .cartOutList').append('<li class="swipeout"><div class="item-content swipeout-content"><div class="item-inner"><div class="item-title"><h5 class="col-90 no-padding no-margin" style="float: left">'
                   + app.data.productList[v][0].name+
-                  '</div></div></div>'+
+                  '</h5><h5 class="no-padding no-margin" style="float: right;position: absolute; right: 250px">'+app.data.productList[v][0].price+'</h5></div></div></div>'+
                   '<div class="swipeout-actions-right">'+
                   '<a href="#" class="swipeout-delete">Delete</a>'+
                   '</div></li>');
