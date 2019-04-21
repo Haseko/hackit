@@ -168,8 +168,8 @@ var homeView = app.views.create('#view-home', {
       app.data.products.forEach(function(v, i){
         if(i < 4){
           $$('#mainPage .category-list').append(
-            '<a class="col-50 margin-bottom" href="/category-page/'+v.category+'" style="display: block; background-image: url(images/'+v.category+'.jpg); -webkit-background-size: cover;">'+
-            '<h2 class="text-align-center" style="color: white">' + v.title +'</h2></a>'
+            '<a class="col-50 margin-bottom padding-top" href="/category-page/'+v.category+'" style="display: block; background-image: url(images/'+v.category+'.jpg); -webkit-background-size: cover;">'+
+            '<div class="text-align-center" style="color: white; background: red; display: block;"><h3>' + v.title +'</h3></div></a>'
           );
         }
       });
