@@ -30,6 +30,14 @@ var app  = new Framework7({
 
         Taco:[
           1
+        ],
+
+        Nachos:[
+          2
+        ],
+
+        Taquitos:[
+          1, 2
         ]
       },
 
@@ -137,11 +145,13 @@ var app  = new Framework7({
         },
         {          id: '5',
           title: 'Nachos',
-          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
+          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.',
+          category: 'Nachos'
         },
         {          id: '6',
           title: 'Taquitos',
-          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
+          description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.',
+          category: 'Taquitos'
         },
       ]
     };
