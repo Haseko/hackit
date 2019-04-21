@@ -8,6 +8,11 @@
 .category-col .col-50 {
 	height: 150px;
 }
+.category-col .col-50 h2{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+ }
 #app {
 	background: #efeff4;
 }
