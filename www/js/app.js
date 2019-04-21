@@ -232,7 +232,7 @@ var homeView = app.views.create('#view-home', {
             for (var v in app.data.category) {
                 if (i < 4) {
                     $$('#mainPage .category-list').append(
-                        '<a class="col-50 margin-bottom padding-top" href="/category-page/' + app.data.category[v].category + '" style="display: block; border-radius: 15px;background-image: url(images/' + app.data.category[v].category + '.jpg); -webkit-background-size: cover;">' +
+                        '<a class="col-50 margin-bottom padding-top elevation-6" href="/category-page/' + app.data.category[v].category + '" style="display: block; border-radius: 15px;background-image: url(images/' + app.data.category[v].category + '.jpg); -webkit-background-size: cover;">' +
                         '<h4 class="text-align-center" style="color: white; background: rgba(255,59,48,0.8);padding-top: 7px; padding-bottom: 7px">' + app.data.category[v].title + '</h4></a>'
                     );
                 }
