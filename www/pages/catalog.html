@@ -17,7 +17,20 @@
                 <h2> RUB</h2>
               </div>
               <div class="col-40 padding-top">
-                  <button class="button button-fill bg-color-white" style="margin-left: 10px;margin-top: 18px; color:  rgb(255,59,48)">
+                  <button class="button button-fill bg-color-white" style="margin-left: 10px;margin-top: 18px; color:  rgb(255,59,48);" onclick="
+                        app.data.cart = [];
+                        app.data.price = 0;
+                        $$('#price').html(app.data.price);
+                        $$('#view-catalog .cartOutList').html('');
+                      app.dialog.create({
+                          title: 'Cart',
+                          text: 'Order is coming to you!',
+                          buttons: [
+                            {
+                              text: 'Ok!',
+                            }
+                          ],
+                      }).open();">
                     ORDER
                   </button>
               </div>
